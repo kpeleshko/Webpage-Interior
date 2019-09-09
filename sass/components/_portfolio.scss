@@ -1,0 +1,117 @@
+.portfolio {
+    margin-bottom: 10rem;
+
+    &__navigation {
+        display: flex;
+        list-style: none;
+        margin: 4rem 0;
+    }
+
+    &__navigation__list {
+        color: #807f7f;
+        margin-right: 4rem;
+        font-size: 1.4rem;
+        padding-bottom: .5rem;
+        transition: all .5s;
+
+        &--active {
+            font-weight: 500;
+            color: $color-black;
+            border-bottom: 1px solid $color-black;
+        }
+
+        &:hover {
+            font-weight: 500;
+            color: $color-black;
+        }
+    }
+
+    &__galery {
+        display: flex;
+        overflow: hidden;
+
+        &__photo-box {
+            flex: 0 0 25%;
+            height: 42rem;
+            position: relative;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            &::after {
+                background-color: rgba($color-main, .8);
+                content: '';
+                display: block;
+                height: 100%;
+                position: absolute;
+                width: 100%;
+            }
+        }
+
+        .img1 { background-image: url(../img/img1.jpg);}
+        .img2 { background-image: url(../img/img2.jpg);}
+        .img3 { background-image: url(../img/img3.jpg);}
+        .img4 { background-image: url(../img/img4.jpg);}
+
+        &__text {
+            position: absolute;
+            z-index: 30;
+            top: 2rem;
+            left: 2rem;
+            width: 70%;
+            color: $color-white;
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        &__vertical-text {
+            position: absolute;
+            z-index: 30;
+            bottom: 2rem;
+            left: 2rem;
+            color: $color-white;
+            font-size: 1.2rem;
+            font-weight: 100;
+            writing-mode: sideways-lr;
+            text-orientation: sideways-right;
+        }
+
+        
+    }
+
+    // HOVER PHOTO////////////////
+    ////////////////////////////////
+
+
+    &__galery__photo-box:hover {
+
+        transform: scaleX(1.1);
+
+        &::after {
+            background-color: transparent;
+        }
+
+        & > * {
+            visibility: hidden;
+        }
+
+        &::before {
+            content: '+';
+            display: block;
+            z-index: 10;
+            @include center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            background-color: $color-secondary;
+            color: rgba($color-white, .9);
+            font-size: 6rem;
+            font-weight: 100;
+            font-family: Arial, Helvetica, sans-serif;
+            transform: translate(-50%, -50%) scaleX(1);
+        }
+    }
+}

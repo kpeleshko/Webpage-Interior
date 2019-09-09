@@ -1,0 +1,28 @@
+.feature {
+    &:not(:last-child) {margin-right: 5rem;}
+    &:nth-child(even) {
+        align-self: flex-end;
+    }
+
+    &__number {
+        font-family: 'Playfair Display', serif;
+        font-size: 8rem;
+        font-weight: 600;
+        line-height: 1;
+        color: rgba(254, 160, 82, .26);
+    }
+
+    &__header {
+        margin: 1.5rem 0;
+    }
+
+    &__text {
+        color: $color-grey-text;
+        transition: all .5s;
+        line-height: 2rem;
+
+        &:hover {
+            color: $color-black;
+        }
+    }
+}

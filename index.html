@@ -14,19 +14,28 @@
 </head>
 
 <body>
+
+    <!-- HEADER -->
+
     <header class="header">
         <div class="container">
-            <div class="main-photo-box">
-
+            <div class="main-photo-box"></div>
+            <div id="icon" class="main-menu">
+                <ul class="main-menu__list">
+                    <li><a href="#" class="main-menu__list__item">ГЛАВНАЯ</a></li>
+                    <li><a href="#" class="main-menu__list__item">ПРЕИМУЩЕСТВА</a></li>
+                    <li><a href="#" class="main-menu__list__item">ПОРТФОЛИО</a></li>
+                    <li><a href="#" class="main-menu__list__item">НАШИ УСЛУГИ</a></li>
+                    <li><a href="#" class="main-menu__list__item">ОТЗЫВЫ</a></li>
+                    <li><a href="#" class="main-menu__list__item">КОНТАКТЫ</a></li>
+                </ul>
             </div>
         </div>
         <div class="main-screen">
             <div class="main-screen__wrapper  container">
                 <div class="main-screen__top">
-                    <div class="main-screen__top__menu-box">
-                        <svg class="main-screen__top__menu">
-                            <use xlink:href="/img/sprite.svg#icon-menu">
-                        </svg>
+                    <div id="menu" class="main-screen__top__menu-box" onclick="mainMenu()">
+                        &#9776;
                     </div>
                     <div class="main-screen__top__logo">
                         <img src="/img/logo1.png" alt="logo">
@@ -47,7 +56,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus sapiente commodi?
                         Accusantium!
                     </p>
-                    <button class="btn-main">Заказать дизайн</button>
+                    <button class="btn-main">Заказать дизайн &#8594; </button>
                 </div>
 
                 <div class="main-screen__bottom">
@@ -74,6 +83,9 @@
 
     </header>
     <main>
+
+        <!-- FEATURE -->
+
         <div class="features container">
             <div class="feature">
                 <div class="feature__number">01</div>
@@ -104,30 +116,38 @@
             </div>
         </div>
 
-        <div class="portfolio">
+        <!-- PORTFOLIO -->
+
+        <div class="portfolio container">
             <h2>Портфолио</h2>
             <ul class="portfolio__navigation">
-                <li class="portfolio__navigation__list portfolio__navigation__list--active">Все проекты</li>
-                <li class="portfolio__navigation__list">Дизайн интерьеров</li>
-                <li class="portfolio__navigation__list">Отделочны</li>
+                <li class="portfolio__navigation__list portfolio__navigation__list--active"><a href="#">Все проекты</a></li>
+                <li class="portfolio__navigation__list"><a href="#">Дизайн интерьеров</a></li>
+                <li class="portfolio__navigation__list"><a href="#">Отделочны</a></li>
             </ul>
 
             <div class="portfolio__galery">
-                <div class="portfolio__galery__photo-box">
-                    <img src="/img/img1.jpg" alt="photo">
+                <div class="portfolio__galery__photo-box img1">
+                    <p class="portfolio__galery__text">Дизайн интерьера гостиной </p>
+                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery__photo-box">
-                    <img src="/img/img2.jpg" alt="photo">
+                <div class="portfolio__galery__photo-box img2">
+                    <p class="portfolio__galery__text">Дизайн интерьера гостиной </p>
+                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery__photo-box">
-                    <img src="/img/img3.jpg" alt="photo">
+                <div class="portfolio__galery__photo-box img3">
+                    <p class="portfolio__galery__text">Дизайн столовой в стиле «Бохо» </p>
+                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery__photo-box">
-                    <img src="/img/img4.jpg" alt="photo">
+                <div class="portfolio__galery__photo-box img4">
+                    <p class="portfolio__galery__text">Лофт интерьер  для отеля Hiloft </p>
+                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
                 </div>
             </div>
         </div>
     </main>
+
+<script src="/main.js"></script>
 </body>
 
 </html>
