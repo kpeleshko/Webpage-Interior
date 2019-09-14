@@ -1,0 +1,73 @@
+.service {
+    margin: 10rem 0;
+
+    &__content {
+        display: flex;
+        margin-top: 5rem;
+    }
+
+    &__menu {
+        flex: 0 0 22%;
+        margin-right: 5rem;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            color: $color-grey-text;
+        }
+
+        &-item {
+            align-self: baseline;
+            font-size: 1.6rem;
+            transition: transform .3s, color .3s;
+
+            &:hover {
+                transform: translateX(3rem);
+                color: $color-black;
+            }
+
+            &:active,
+            &--active {
+                transform: translateX(3rem);
+                color: $color-black;
+                border-bottom: 1px solid $color-black;
+            }
+        }
+
+        &-link { padding: 1rem 0;}
+    }
+
+    &__about { flex: 1;}
+
+    &__photo-box { overflow: hidden;}
+
+    &__photo { width: 100%;}
+
+    &__description {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text-box {
+        flex: 0 0 55%;
+
+        &-header { font-size: 2rem;}
+
+        &-text {
+            margin-top: 2rem;
+            line-height: 1.8rem;
+        }
+    }
+
+    &__action {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-btn { margin-bottom: .6rem;}
+    }
+}

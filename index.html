@@ -22,12 +22,12 @@
             <div class="main-photo-box"></div>
             <div id="icon" class="main-menu">
                 <ul class="main-menu__list">
-                    <li><a href="#" class="main-menu__list__item">ГЛАВНАЯ</a></li>
-                    <li><a href="#" class="main-menu__list__item">ПРЕИМУЩЕСТВА</a></li>
-                    <li><a href="#" class="main-menu__list__item">ПОРТФОЛИО</a></li>
-                    <li><a href="#" class="main-menu__list__item">НАШИ УСЛУГИ</a></li>
-                    <li><a href="#" class="main-menu__list__item">ОТЗЫВЫ</a></li>
-                    <li><a href="#" class="main-menu__list__item">КОНТАКТЫ</a></li>
+                    <li><a href="#" class="main-menu__list__item">главная</a></li>
+                    <li><a href="#" class="main-menu__list__item">преимущества</a></li>
+                    <li><a href="#" class="main-menu__list__item">портфолио</a></li>
+                    <li><a href="#" class="main-menu__list__item">наши услуги</a></li>
+                    <li><a href="#" class="main-menu__list__item">отзывы</a></li>
+                    <li><a href="#" class="main-menu__list__item">контакты</a></li>
                 </ul>
             </div>
         </div>
@@ -56,7 +56,7 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus sapiente commodi?
                         Accusantium!
                     </p>
-                    <button class="btn-main">Заказать дизайн &#8594; </button>
+                    <button class="btn">Заказать дизайн &#8594; </button>
                 </div>
 
                 <div class="main-screen__bottom">
@@ -86,7 +86,7 @@
 
         <!-- FEATURE -->
 
-        <div class="features container">
+        <section class="features container">
             <div class="feature">
                 <div class="feature__number">01</div>
                 <h3 class="feature__header">Берем весь ремонт на себя</h3>
@@ -114,37 +114,145 @@
                 <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
                     voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
             </div>
-        </div>
+        </section>
 
         <!-- PORTFOLIO -->
 
-        <div class="portfolio container">
+        <section class="portfolio container">
             <h2>Портфолио</h2>
             <ul class="portfolio__navigation">
-                <li class="portfolio__navigation__list portfolio__navigation__list--active"><a href="#">Все проекты</a></li>
-                <li class="portfolio__navigation__list"><a href="#">Дизайн интерьеров</a></li>
-                <li class="portfolio__navigation__list"><a href="#">Отделочны</a></li>
+                <li class="portfolio__navigation-item portfolio__navigation-item--active"><a href="#">Все проекты</a></li>
+                <li class="portfolio__navigation-item"><a href="#">Дизайн интерьеров</a></li>
+                <li class="portfolio__navigation-item"><a href="#">Отделочны</a></li>
             </ul>
 
             <div class="portfolio__galery">
-                <div class="portfolio__galery__photo-box img1">
-                    <p class="portfolio__galery__text">Дизайн интерьера гостиной </p>
-                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
+                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg1">
+                    <p class="portfolio__galery-text">Дизайн интерьера гостиной </p>
+                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
+                    <svg class="portfolio__galery-icon portfolio__galery-icon--left">
+                        <use xlink:href="/img/sprite.svg#icon-arrow-long-left">
+                    </svg>
                 </div>
-                <div class="portfolio__galery__photo-box img2">
-                    <p class="portfolio__galery__text">Дизайн интерьера гостиной </p>
-                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
+                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg2">
+                    <p class="portfolio__galery-text">Дизайн интерьера гостиной </p>
+                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery__photo-box img3">
-                    <p class="portfolio__galery__text">Дизайн столовой в стиле «Бохо» </p>
-                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
+                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg3">
+                    <p class="portfolio__galery-text">Дизайн столовой в стиле «Бохо» </p>
+                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery__photo-box img4">
-                    <p class="portfolio__galery__text">Лофт интерьер  для отеля Hiloft </p>
-                    <p class="portfolio__galery__vertical-text">Дизайн интерьера</p>
+                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg4">
+                    <p class="portfolio__galery-text">Лофт интерьер  для отеля Hiloft </p>
+                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
+                    <svg class="portfolio__galery-icon portfolio__galery-icon--right">
+                        <use xlink:href="/img/sprite.svg#icon-arrow-long-right">
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="service">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="service__content">
+                <div class="service__menu">
+                    <ul class="service__menu-list">
+                        <li class="service__menu-item"><a href="#" class="service__menu-link">Дизайн жилого  помещения</a></li>
+                        <li class="service__menu-item"><a href="#" class="service__menu-link">Дизайн отельных комнат</a></li>
+                        <li class="service__menu-item service__menu-item--active"><a href="#" class="service__menu-link">Дизайн коммерческих объектов</a></li>
+                        <li class="service__menu-item"><a href="#" class="service__menu-link">Ремонт под ключ</a></li>
+                        <li class="service__menu-item"><a href="#" class="service__menu-link">Отделочные работы</a></li>
+                        <li class="service__menu-item"><a href="#" class="service__menu-link">Выезд дизайнера на дом</a></li>
+                    </ul>
+                </div>
+
+                <div class="service__about">
+                    <div class="service__photo-box">
+                        <img src="/img/img5.jpg" alt="interior" class="service__photo">
+                    </div>
+                    <div class="service__description">
+                        <div class="service__text-box">
+                            <h3 class="service__text-box-header">Дизайн коммерческих объектов</h3>
+                            <p class="service__text-box-text">Работая с коммерческими объектами, студия изучает целевую аудитj Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate excepturi officiis soluta nemo nulla earum aperiam laudantium quisquam sequi deserunt.
+                            </p>
+                        </div>
+                        <div class="service__action">
+                            <span class="service__action-projects">532 проекта </span>
+                            <button class="service__action-btn btn btn--dark">консультация</button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
+        </section>
+
+
+
+        <section class="video">
+            <div class="video__content">
+                <div class="video__content-play">
+                    <svg class="video__content-play-icon">
+                        <use xlink:href="/img/sprite.svg#icon-controller-play">
+                    </svg>
+                </div>
+                <p class="video__content-text">О  студии дизайна интерьеров BRUME за 2 минуты</p>
+            </div>
+        </section>
+
+
+
+        <section class="steps">
+            <div class="container">
+                <h2>Этапы работы</h2>
+                <div class="steps__content">
+                    <div class="steps__item">
+                        <div class="steps__item-number-box">
+                            <div class="steps__item-number">1</div>
+                        </div>
+                        <h3 class="steps__item-header">Консультация</h3>
+                        <p class="steps__item-text">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, сговариваем сроки</p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-number-box">
+                            <div class="steps__item-number">2</div>
+                        </div>
+                        <h3 class="steps__item-header">Техническое задание</h3>
+                        <p class="steps__item-text">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта</p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-number-box">
+                            <div class="steps__item-number">3</div>
+                        </div>
+                        <h3 class="steps__item-header">Замеры и планировка</h3>
+                        <p class="steps__item-text">Фиксируем размеры стен, окон, плинтусов, дверных проемов  для эффективной работы</p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-number-box">
+                            <div class="steps__item-number">4</div>
+                        </div>
+                        <h3 class="steps__item-header">Дизайн-концепция</h3>
+                        <p class="steps__item-text">Создаем концепцию на основе пожеланий клиента, его образов и ощущений подбираем мебель</p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-number-box">
+                            <div class="steps__item-number">5</div>
+                        </div>
+                        <h3 class="steps__item-header">Дизайн-концепция</h3>
+                        <p class="steps__item-text">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительним нормам</p>
+                    </div>
+                    <div class="steps__item">
+                        <div class="steps__item-number-box">
+                            <div class="steps__item-number">6</div>
+                        </div>
+                        <h3 class="steps__item-header">Комплектация интерьера</h3>
+                        <p class="steps__item-text">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
 <script src="/main.js"></script>

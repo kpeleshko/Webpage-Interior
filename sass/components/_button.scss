@@ -1,4 +1,4 @@
-.btn-main {
+.btn {
     outline: none;
     cursor: pointer;
     border: 1px solid $color-white;
@@ -7,7 +7,15 @@
     font-size: 1.4rem;
     text-transform: uppercase;
     padding: .7rem 1.5rem;
-    transition: all .5s; 
+    transition: background-color .3s; 
+
+    &--dark {
+        border: 1px solid $color-black;
+        color: $color-black;
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding: 1rem 2.5rem;
+    }
 
     &:hover {
         background-color: $color-secondary;

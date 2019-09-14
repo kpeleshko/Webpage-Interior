@@ -1,13 +1,13 @@
 .portfolio {
-    margin-bottom: 10rem;
+    //margin-bottom: 10rem;
 
     &__navigation {
         display: flex;
         list-style: none;
-        margin: 4rem 0;
+        margin: 5rem 0 4rem 0;
     }
 
-    &__navigation__list {
+    &__navigation-item {
         color: #807f7f;
         margin-right: 4rem;
         font-size: 1.4rem;
@@ -30,7 +30,7 @@
         display: flex;
         overflow: hidden;
 
-        &__photo-box {
+        &-photo-box {
             flex: 0 0 25%;
             height: 42rem;
             position: relative;
@@ -46,14 +46,14 @@
                 position: absolute;
                 width: 100%;
             }
+
+            &--bg1 { background-image: url(../img/img1.jpg);}
+            &--bg2 { background-image: url(../img/img2.jpg);}
+            &--bg3 { background-image: url(../img/img3.jpg);}
+            &--bg4 { background-image: url(../img/img4.jpg);}
         }
 
-        .img1 { background-image: url(../img/img1.jpg);}
-        .img2 { background-image: url(../img/img2.jpg);}
-        .img3 { background-image: url(../img/img3.jpg);}
-        .img4 { background-image: url(../img/img4.jpg);}
-
-        &__text {
+        &-text {
             position: absolute;
             z-index: 30;
             top: 2rem;
@@ -62,28 +62,40 @@
             color: $color-white;
             font-size: 1.4rem;
             font-weight: 400;
+
+            &--vertical {
+                bottom: 2rem;
+                font-size: 1.2rem;
+                font-weight: 100;
+                writing-mode: sideways-lr;
+                text-orientation: sideways-right;
+            }
         }
 
-        &__vertical-text {
-            position: absolute;
+        &-icon {
             z-index: 30;
-            bottom: 2rem;
-            left: 2rem;
-            color: $color-white;
-            font-size: 1.2rem;
-            font-weight: 100;
-            writing-mode: sideways-lr;
-            text-orientation: sideways-right;
-        }
+            display: block;
+            position: absolute;
+            top: 50%;
+            height: 3rem;
+            width: 3rem;
+            fill: rgba($color-white, .8);
+            transform: translateY(-50%);
 
-        
+            &--left {
+                left: 2rem;
+            }
+
+            &--right {
+                right: 2rem;
+            }
+        }
     }
 
     // HOVER PHOTO////////////////
     ////////////////////////////////
 
-
-    &__galery__photo-box:hover {
+    &__galery-photo-box:hover {
 
         transform: scaleX(1.1);
 
@@ -106,7 +118,7 @@
             height: 6rem;
             width: 6rem;
             border-radius: 50%;
-            background-color: $color-secondary;
+            background-color: rgba($color-secondary, .8);
             color: rgba($color-white, .9);
             font-size: 6rem;
             font-weight: 100;

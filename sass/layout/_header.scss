@@ -33,6 +33,7 @@
             padding: 1rem;
             margin-bottom: 1rem;
             color: #88929b;
+            text-transform: uppercase;
     
             &:hover {
                 color: $color-secondary;
@@ -109,6 +110,11 @@
 
         &__text {
             margin-bottom: 2rem;
+        }
+        &-icon {
+            height: 2rem;
+            width: 3rem;
+            fill: $color-white;
         }
     }
 
