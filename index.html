@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Raleway&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/style.css">
 
     <title>Дизайн нтерьеров</title>
 </head>
@@ -18,101 +20,126 @@
     <!-- HEADER -->
 
     <header class="header">
-        <div class="container">
-            <div class="main-photo-box"></div>
-            <div id="icon" class="main-menu">
-                <ul class="main-menu__list">
-                    <li><a href="#" class="main-menu__list__item">главная</a></li>
-                    <li><a href="#" class="main-menu__list__item">преимущества</a></li>
-                    <li><a href="#" class="main-menu__list__item">портфолио</a></li>
-                    <li><a href="#" class="main-menu__list__item">наши услуги</a></li>
-                    <li><a href="#" class="main-menu__list__item">отзывы</a></li>
-                    <li><a href="#" class="main-menu__list__item">контакты</a></li>
-                </ul>
+                <div class="main-photo-box"></div>
+                <div class="main-menu">
+                    <div class="burger-btn">
+                        <div class="burger-icon-wraper burger-icon-wraper--open" onclick="mainMenu()">
+                            <div class="burger-icon" id="burger-icon"></div>
+                        </div>
+                    </div>
+                    <ul class="main-menu__list">
+                        <li><a href="#" class="main-menu__list__item">Главная</a></li>
+                        <li><a href="#" class="main-menu__list__item">Преимущества</a></li>
+                        <li><a href="#" class="main-menu__list__item">Портфолио</a></li>
+                        <li><a href="#" class="main-menu__list__item">Наши услуги</a></li>
+                        <li><a href="#" class="main-menu__list__item">Отзывы</a></li>
+                        <li><a href="#" class="main-menu__list__item">Контакты</a></li>
+                    </ul>
+                    <div class="social">
+                        <svg class="social-icon">
+                            <use xlink:href="img/sprite.svg#icon-vk-alternitive">
+                        </svg>
+                        <svg class="social-icon">
+                            <use xlink:href="img/sprite.svg#icon-instagram">
+                        </svg>
+                        <svg class="social-icon">
+                            <use xlink:href="img/sprite.svg#icon-facebook">
+                        </svg>
+                    </div>
+                </div>
+            
+            
+            <div class="main-screen">
+                <div class="main-screen__wrapper  container">
+    
+                    <div class="main-screen__top">
+                        <div class="burger-btn">
+                            <div class="burger-icon-wraper" onclick="mainMenu()">
+                                <div class="burger-icon" id="burger-icon"></div>
+                            </div>
+                        </div>
+                        <div class="main-screen__top-logo">
+                            <a class="main-screen__top-logo--desktop" href="index.html">
+                                <img class="main-screen__top-logo--desktop-img" src="img/logo1.png" alt="logo"></a>
+                            <a class="main-screen__top-logo--lap-top" href="index.html">
+                                <img class="main-screen__top-logo--lap-top-img" src="img/logo2.png" alt="logo"></a>
+                        </div>
+                        <div class="main-screen__top-phone">
+                            <svg class="main-screen__top-phone-icon">
+                                <use xlink:href="img/sprite.svg#icon-phone">
+                            </svg>
+                            <p class="main-screen__top-phone-number">+7 (800) 823 48 88</p>
+                        </div>
+                    </div>
+    
+                    <div class="main-screen__medium">
+                        <h1 class="main-screen__medium-header">
+                            Дизайн нтерьеров
+                        </h1>
+                        <p class="main-screen__medium-text">
+                                Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
+                        </p>
+                        <button class="btn btn--delete">Заказать дизайн &#8594; </button>
+                        <button class="btn btn--main main-screen__medium-btn">Заказать дизайн &#8594; </button>
+                    </div>
+    
+                    <div class="main-screen__bottom">
+                        <div class="social">
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-vk-alternitive">
+                            </svg>
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-instagram">
+                            </svg>
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-facebook">
+                            </svg>
+                        </div>
+                        <div class="blocks">
+                            <div class="blocks__item blocks__item--active"></div>
+                            <div class="blocks__item"></div>
+                            <div class="blocks__item"></div>
+                            <div class="blocks__item"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="main-screen">
-            <div class="main-screen__wrapper  container">
-                <div class="main-screen__top">
-                    <div id="menu" class="main-screen__top__menu-box" onclick="mainMenu()">
-                        &#9776;
-                    </div>
-                    <div class="main-screen__top__logo">
-                        <img src="/img/logo1.png" alt="logo">
-                    </div>
-                    <div class="main-screen__top__phone">
-                        <svg class="main-screen__top__phone-icon">
-                            <use xlink:href="/img/sprite.svg#icon-phone">
-                        </svg>
-                        <p class="main-screen__top__phone-number">+7 (800) 823 48 88</p>
-                    </div>
-                </div>
-
-                <div class="main-screen__medium">
-                    <h1 class="main-screen__medium__header">
-                        Дизайн нтерьеров
-                    </h1>
-                    <p class="main-screen__medium__text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque delectus sapiente commodi?
-                        Accusantium!
-                    </p>
-                    <button class="btn">Заказать дизайн &#8594; </button>
-                </div>
-
-                <div class="main-screen__bottom">
-                    <div class="main-screen__bottom__social">
-                        <svg class="main-screen__bottom__social-icon">
-                            <use xlink:href="/img/sprite.svg#icon-vk-alternitive">
-                        </svg>
-                        <svg class="main-screen__bottom__social-icon">
-                            <use xlink:href="/img/sprite.svg#icon-instagram">
-                        </svg>
-                        <svg class="main-screen__bottom__social-icon">
-                            <use xlink:href="/img/sprite.svg#icon-facebook">
-                        </svg>
-                    </div>
-                    <div class="main-screen__bottom__blocks">
-                        <div class="main-screen__bottom__block main-screen__bottom__block--active"></div>
-                        <div class="main-screen__bottom__block"></div>
-                        <div class="main-screen__bottom__block"></div>
-                        <div class="main-screen__bottom__block"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        
     </header>
     <main>
 
         <!-- FEATURE -->
 
-        <section class="features container">
-            <div class="feature">
-                <div class="feature__number">01</div>
-                <h3 class="feature__header">Берем весь ремонт на себя</h3>
-                <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
-                    voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
-            </div>
-
-            <div class="feature">
-                <div class="feature__number">02</div>
-                <h3 class="feature__header">Мы - профессионалы своего дела</h3>
-                <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
-                    voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
-            </div>
-
-            <div class="feature">
-                <div class="feature__number">03</div>
-                <h3 class="feature__header">Наши проекты индивидуальны</h3>
-                <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
-                    voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
-            </div>
-
-            <div class="feature">
-                <div class="feature__number">04</div>
-                <h3 class="feature__header">Рабатаем на выгодных условиях</h3>
-                <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
-                    voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
+        <section class="features">
+            <div class="container feature-wraper">
+                <div class="feature">
+                    <div class="feature__number">01</div>
+                    <h3 class="feature__header">Берем весь ремонт на себя</h3>
+                    <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
+                        voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
+                </div>
+    
+                <div class="feature">
+                    <div class="feature__number">02</div>
+                    <h3 class="feature__header">Мы - профессионалы своего дела</h3>
+                    <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
+                        voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
+                </div>
+    
+                <div class="feature">
+                    <div class="feature__number">03</div>
+                    <h3 class="feature__header">Наши проекты индивидуальны</h3>
+                    <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
+                        voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
+                </div>
+    
+                <div class="feature">
+                    <div class="feature__number">04</div>
+                    <h3 class="feature__header">Рабатаем на выгодных условиях</h3>
+                    <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae quidem
+                        voluptatum magnam dolores quo, libero rem deserunt doloremque quaerat?</p>
+                </div>
             </div>
         </section>
 
@@ -127,82 +154,79 @@
             </ul>
 
             <div class="portfolio__galery">
-                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg1">
-                    <p class="portfolio__galery-text">Дизайн интерьера гостиной </p>
-                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
-                    <svg class="portfolio__galery-icon portfolio__galery-icon--left">
-                        <use xlink:href="/img/sprite.svg#icon-arrow-long-left">
-                    </svg>
+                <div class="portfolio__photo-box portfolio__photo-box--bg1">
+                    <p class="portfolio__text">Дизайн интерьера гостиной </p>
+                    <p class="portfolio__text portfolio__text--vertical">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg2">
-                    <p class="portfolio__galery-text">Дизайн интерьера гостиной </p>
-                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
+                <div class="portfolio__photo-box portfolio__photo-box--bg2">
+                    <p class="portfolio__text">Дизайн интерьера гостиной </p>
+                    <p class="portfolio__text portfolio__text--vertical">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg3">
-                    <p class="portfolio__galery-text">Дизайн столовой в стиле «Бохо» </p>
-                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
+                <div class="portfolio__photo-box portfolio__photo-box--bg3">
+                    <p class="portfolio__text">Дизайн столовой в стиле «Бохо» </p>
+                    <p class="portfolio__text portfolio__text--vertical">Дизайн интерьера</p>
                 </div>
-                <div class="portfolio__galery-photo-box portfolio__galery-photo-box--bg4">
-                    <p class="portfolio__galery-text">Лофт интерьер  для отеля Hiloft </p>
-                    <p class="portfolio__galery-text portfolio__galery-text--vertical">Дизайн интерьера</p>
-                    <svg class="portfolio__galery-icon portfolio__galery-icon--right">
-                        <use xlink:href="/img/sprite.svg#icon-arrow-long-right">
-                    </svg>
+                <div class="portfolio__photo-box portfolio__photo-box--bg4">
+                    <p class="portfolio__text">Лофт интерьер  для отеля Hiloft </p>
+                    <p class="portfolio__text portfolio__text--vertical">Дизайн интерьера</p>
                 </div>
             </div>
         </section>
 
+        <!-- SERVICE -->
 
         <section class="service">
-        <div class="container">
-            <h2>Наши услуги</h2>
-            <div class="service__content">
-                <div class="service__menu">
-                    <ul class="service__menu-list">
-                        <li class="service__menu-item"><a href="#" class="service__menu-link">Дизайн жилого  помещения</a></li>
-                        <li class="service__menu-item"><a href="#" class="service__menu-link">Дизайн отельных комнат</a></li>
-                        <li class="service__menu-item service__menu-item--active"><a href="#" class="service__menu-link">Дизайн коммерческих объектов</a></li>
-                        <li class="service__menu-item"><a href="#" class="service__menu-link">Ремонт под ключ</a></li>
-                        <li class="service__menu-item"><a href="#" class="service__menu-link">Отделочные работы</a></li>
-                        <li class="service__menu-item"><a href="#" class="service__menu-link">Выезд дизайнера на дом</a></li>
-                    </ul>
-                </div>
-
-                <div class="service__about">
-                    <div class="service__photo-box">
-                        <img src="/img/img5.jpg" alt="interior" class="service__photo">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <div class="service__content">
+                    <div class="service__menu">
+                        <ul class="service__menu-list">
+                            <li class="service__menu-item"><a href="#" class="service__menu-link">Дизайн жилого  помещения</a></li>
+                            <li class="service__menu-item"><a href="#" class="service__menu-link">Дизайн отельных комнат</a></li>
+                            <li class="service__menu-item service__menu-item--active"><a href="#" class="service__menu-link">Дизайн коммерческих объектов</a></li>
+                            <li class="service__menu-item"><a href="#" class="service__menu-link">Ремонт под ключ</a></li>
+                            <li class="service__menu-item"><a href="#" class="service__menu-link">Отделочные работы</a></li>
+                            <li class="service__menu-item"><a href="#" class="service__menu-link">Выезд дизайнера на дом</a></li>
+                        </ul>
                     </div>
-                    <div class="service__description">
-                        <div class="service__text-box">
-                            <h3 class="service__text-box-header">Дизайн коммерческих объектов</h3>
-                            <p class="service__text-box-text">Работая с коммерческими объектами, студия изучает целевую аудитj Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate excepturi officiis soluta nemo nulla earum aperiam laudantium quisquam sequi deserunt.
-                            </p>
-                        </div>
-                        <div class="service__action">
-                            <span class="service__action-projects">532 проекта </span>
-                            <button class="service__action-btn btn btn--dark">консультация</button>
-                        </div>
 
+                    <div class="service__about">
+                        <div class="service__photo-box">
+                            <img src="img/img5.jpg" alt="interior" class="service__photo">
+                        </div>
+                        <div class="service__description">
+                            <div class="service__text-box">
+                                <h3 class="service__text-box-header">Дизайн коммерческих объектов</h3>
+                                <p class="service__text-box-text">Работая с коммерческими объектами, студия изучает целевую аудитj Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate excepturi officiis soluta nemo nulla earum aperiam laudantium quisquam sequi deserunt.
+                                </p>
+                            </div>
+                            <div class="service__action">
+                                <span class="service__action-projects">532 проекта </span>
+                                <button class="service__action-btn btn btn--dark">консультация</button>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
 
-
+        <!-- VIDEO -->
 
         <section class="video">
             <div class="video__content">
                 <div class="video__content-play">
-                    <svg class="video__content-play-icon">
-                        <use xlink:href="/img/sprite.svg#icon-controller-play">
-                    </svg>
+                    <button class="video__content-play-btn">
+                        <svg class="video__content-play-icon">
+                            <use xlink:href="img/sprite.svg#icon-controller-play">
+                        </svg>
+                    </button>
                 </div>
                 <p class="video__content-text">О  студии дизайна интерьеров BRUME за 2 минуты</p>
             </div>
         </section>
 
-
+        <!-- STEPS -->
 
         <section class="steps">
             <div class="container">
@@ -253,9 +277,126 @@
                 </div>
             </div>
         </section>
+
+        <!-- FORM -->
+
+        <section class="connection">
+            <form action="#" class="form">
+                <div class="form__text">
+                    <h2 class="form__header"> Мечтаете об интерьере от BRUME?</h2>
+                    <p class="form__p margin-bottom">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
+                </div>
+
+                <div class="form__field">
+                    <input class="form__input" type="text" id="name" placeholder="Имя*">
+                    <label class="form__label" for="name">
+                        <svg class="form__label-icon">
+                            <use xlink:href="img/sprite.svg#icon-user">
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="form__field">
+                    <input class="form__input" type="phone" id="phone" placeholder="Телефон*">
+                    <label class="form__label" for="phone">
+                        <svg class="form__label-icon">
+                            <use xlink:href="img/sprite.svg#icon-phone">
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="form__field">
+                    <input class="form__input" type="email" id="email" placeholder="E-mail">
+                    <label class="form__label" for="email">
+                        <svg class="form__label-icon">
+                            <use xlink:href="img/sprite.svg#icon-mail">
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="form__field">
+                    <button class="form__btn btn btn--form">отправить</button>
+                </div>
+
+                <p class="form__p">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных.</p>
+            </form>
+
+            <div class="connection__photo"></div>
+        </section>
+
+        <!-- TESTOMONIALS -->
+
+        <section class="testomonials">
+            <div class="container">
+                <h2>Отзывы наших клиентов</h2>
+            </div>
+
+            <div class="reviews">
+                <figure class="review review--first">
+                    <figcaption class="review__photo">
+                        <img class="review__photo-user" src="img/user1.jpg" alt="">
+                    </figcaption>
+                </figure>
+    
+                <figure class="review review--second">
+                    <blockquote class="review__content">
+                        <h3 class="review__content-header">Александра Холодная</h3>
+                        <h4 class="review__content-details">Услуга: инерьер детской</h4>
+                        <p class="review__content-text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Зфбота прошла быстро и легко,ю команда выполнила  все точно в строк, сделали все как ми хотели. Вследующтй раз обратимся к BRUME!</p>
+                    </blockquote>
+                    <figcaption class="review__photo review__photo--active">
+                        <img class="review__photo-user" src="img/user2.jpg" alt="">
+                    </figcaption>
+                </figure>
+    
+                <figure class="review review--third">
+                    <figcaption class="review__photo">
+                        <img class="review__photo-user" src="img/user3.jpg" alt="">
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="blocks-container">
+                <div class="blocks">
+                    <div class="blocks__item blocks__item--active"></div>
+                    <div class="blocks__item"></div>
+                    <div class="blocks__item"></div>
+                    <div class="blocks__item"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__content">
+                    <p class="footer__copyright">BRUME interior, 2017 &#169;</p>
+                    <div class="footer__info">
+                        <a class="footer__logo" href="index.html"><img src="img/logo2.png" alt="logo"></a>
+                        <div class="social">
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-vk-alternitive">
+                            </svg>
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-instagram">
+                            </svg>
+                            <svg class="social-icon">
+                                <use xlink:href="img/sprite.svg#icon-facebook">
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="footer__aughtor">HolodnayaDesign</p>
+                </div>
+            </div>
+        </footer>
     </main>
 
-<script src="/main.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+  
+    <script src="/main.js"></script>
 </body>
 
 </html>

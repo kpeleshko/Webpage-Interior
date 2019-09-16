@@ -1,0 +1,105 @@
+.connection {
+    display: flex;
+
+    & > * { flex: 1;}
+
+    .form {
+        padding: 5rem 10rem;
+        background-color: $color-main;
+
+        @include respond(tab-port) {
+            text-align: center;
+            background-image: 
+            linear-gradient(rgba($color-main, .9), rgba($color-main, .9)),
+            url('../img/img8.jpg');
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @include respond(phone) { padding: 5rem 2rem;}
+
+        &__text { color: $color-white;}
+
+        &__p {
+            display: inline-block;
+            margin-top: 2rem;
+            width: 80%;
+            font-weight: 200;
+            color: $color-grey-text-light;
+        }
+
+        &__field {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        &__input {
+            display: block;
+            width: 100%;
+            padding: 1rem 0;
+            color: $color-grey-text-light;
+            font-size: $font-size-medium;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $color-grey-text;
+            transition: all .3s;
+    
+            &:focus {
+                outline: none;
+                border-bottom: 2px solid $color-secondary;
+            }
+
+            &:focus + .form__label { fill: $color-secondary;}
+
+            &::-webkit-input-placeholder {
+                color:$color-white;
+                font-size: $font-size-medium;
+               font-family: 'Raleway', Arial, sans-serif;
+            }
+
+            &::-moz-placeholder {
+                color:$color-white;
+                font-size: $font-size-medium;
+               font-family: 'Raleway', Arial, sans-serif;
+            }
+
+            &:-moz-placeholder {
+                color:$color-white;
+                font-size: $font-size-medium;
+               font-family: 'Raleway', Arial, sans-serif;
+            }
+
+            &:-ms-input-placeholder {
+                color:$color-white;
+                font-size: $font-size-medium;
+               font-family: 'Raleway', Arial, sans-serif;
+            }
+        }
+        
+    
+        &__label {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: 0;
+            fill: $color-grey-text-light;
+
+            &-icon {
+                height: 2rem;
+                width: 2rem;
+            }
+        }
+
+        &__btn { margin-top: 3rem;}
+    }
+
+    &__photo {
+        background-image: url(../img/img8.jpg);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include respond(tab-port) { display: none;}
+    }
+}

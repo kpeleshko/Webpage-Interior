@@ -1,34 +1,55 @@
 .steps {
     padding: 2rem 0;
+    @include respond(tab-port) { padding-top: 0;}
+    @include respond(phone) { padding-bottom: 5rem;}
+
     
     &__content {
         display: flex;
         flex-wrap: wrap;
         margin: 3rem 0;
+        @include respond(tab-port) { margin: 2rem 0;}
     }
 
     &__item {
         position: relative;
         width: 33.33333%;
-        padding: 4rem 5rem 1rem 10rem;
+        padding: 4rem 5rem 1rem 8.5rem;
+        @include respond(tab-port) {
+            width: 50%;
+            padding: 3.5rem 0rem 1rem 6.5rem;
+        }
+        @include respond(phone) {
+            width: 100%;
+            padding: 0;
+            margin-top: 2rem;
+        }
+
+        &:hover &-text { color: $color-black;}
 
         &-number-box {
             position: absolute;
-            top: 2.3rem;
-            left: 1rem;
-            height: 6rem;
-            width: 6rem;
+            top: 3rem;
+            left: 1.5rem;
+            height: 4.5rem;
+            width: 4.5rem;
             border-radius: 50%;
-            background-color: $color-white;
+            background-color: inherit;
             border: .5px solid rgba($color-tertiary, .5);
             @include centerFlex;
+
+            @include respond(tab-port) {
+                top: 2.6rem;
+            }
+
+            @include respond(phone) { display: none;}
 
             &:after {
                 content: '';
                 display: block;
                 @include center;
-                height: 7.5rem;
-                width: 7.5rem;
+                height: 5.5rem;
+                width: 5.5rem;
                 border-radius: 50%;
                 border: .5px solid rgba($color-tertiary, .3);
             }
@@ -40,38 +61,40 @@
             width: 2rem;
             background-color: $color-tertiary;
             color: $color-black;
-            font-size: 1.2rem;
+            font-size: $font-size-small;
             border-radius: 50%;
             @include centerFlex;
+
+            @include respond(phone) { display: none;}
 
             &:after {
                 content: '';
                 display: block;
                 @include center;
-                height: 4rem;
-                width: 4rem;
+                height: 3.5rem;
+                width: 3.5rem;
                 border-radius: 50%;
                 border: .5px solid rgba($color-tertiary, .3);
             }
         }
 
         &-header {
-            // padding-bottom: 1rem;
-
             &::after {
                 content: "";
                 display: block;
                 width: 1px;
                 height: 4rem;
                 background-color: $color-black;
-                padding-bottom: 2rem;
                 transform: rotate(90deg) translateY(-50%);
+
+                @include respond(phone) { height: 2.5rem;}
             }
         }
 
         &-text {
-            font-size: 1.4rem;
+            font-size: $font-size-base;
             line-height: 1.8rem;
+            transition: color .3s;
         }
     }
 }

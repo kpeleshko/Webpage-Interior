@@ -1,26 +1,38 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .main-photo-box {
     position: relative;
-    margin: 10vh auto;
+    margin: 10vh 2rem;
     width: 100%;
     height: 80vh;
     background-image: url('../img/photo-main.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+
+    @include respond(tab-port) { background-image: none;}
 }
 
 .main-menu {
     visibility: hidden;
-
     @include center;
     z-index: 20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     background-color: $color-main;
     width: 96.5%;
     height: 80vh;
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        padding-bottom: 20%;
+        height: 100vh;
+        width: 100%;
+    }
 
     &__list {
         font-size: 1.8rem;
@@ -35,9 +47,16 @@
             color: #88929b;
             text-transform: uppercase;
     
-            &:hover {
-                color: $color-secondary;
-            }
+            &:hover { color: $color-secondary;}
+        }
+    }
+
+    .social {
+        display: none;
+
+        @include respond(tab-port) {
+            display: block;
+            margin-top: 4rem;
         }
     }
 }
@@ -49,13 +68,22 @@
     z-index: 10;
     width: 100%;
     height: 100vh;
-    padding: 2rem 0;
+    padding-bottom : 2rem;
     box-sizing: border-box;
     background-image: linear-gradient(
         to right,
         rgba($color-main, .97) 0%,
         rgba($color-main, .97) 50%,
         transparent 50% );
+
+    @include respond(tab-port) {
+        background-image: 
+          linear-gradient(rgba($color-main, .8), rgba($color-main, .8)),
+          url('../img/photo-main.jpg');
+        background-size: cover;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
 
     &__wrapper {
         display: flex;
@@ -64,6 +92,7 @@
         width: 100%;
         height: 100%;
         color: $color-white;
+        @include respond(tab-port) {display: block;}
     }
 
     &__top {
@@ -71,50 +100,67 @@
         justify-content: space-between;
         align-items: center;
 
-        &__menu-box {
-            width: 12rem;
-            font-size: 3rem;
-            cursor: pointer;
+        @include respond(tab-port) { flex-direction: row-reverse;}
+
+        &-logo {
+            &--desktop {
+                @include respond(tab-port) { display: none;}
+            }
+
+            &--lap-top {
+                display: none;
+                @include respond(tab-port) { display: inline-block;}
+                &-img {width: 6rem;}
+            }
         }
 
-        &__menu {
-            height: 4rem;
-            width: 5rem;
-            fill: $color-white;
-        }
-
-        &__phone {
+        &-phone {
             display: flex;
             align-items: center;
             width: 12rem;
+
+            @include respond(tab-port) { display: none;}
         }
 
-        &__phone-icon {
+        &-phone-icon {
             height: 2rem;
             width: 2rem;
             fill: $color-grey-text;
         }
 
-        &__phone-number {
-            color: $color-black;
-        }
+        &-phone-number { color: $color-black;}
     }
 
     &__medium {
         width: 23%;
-        margin-left: 14rem;
+        margin-left: 9rem;
 
-        &__header {
+        @include respond(tab-port) {
+            padding: 0 2rem;
+            margin: 0 auto; 
+            width: 70%;
+            text-align: center;
+            @include center;
+        }
+
+        &-header {
             margin-bottom: 2.5rem;
         }
 
-        &__text {
+        &-text {
             margin-bottom: 2rem;
+            color: $color-white;
         }
         &-icon {
             height: 2rem;
             width: 3rem;
             fill: $color-white;
+        }
+
+        &-btn {
+            display: none;
+
+            @include respond(tab-port) { display: inline-block;}
         }
     }
 
@@ -122,29 +168,106 @@
         display: flex;
         justify-content: space-between;
 
-        &__social {
+        @include respond(tab-port) { visibility: hidden;}
+    }
+}
 
-            &-icon {
-                height: 1.2rem;
-                width: 1.2rem;
-                fill: $color-white;
-                margin-right: 1.5rem;
-            }
+////// SOCIAL ICONS /////////
+////////////////////////////
+
+.social {
+    &-icon {
+        height: 1.4rem;
+        width: 1.4rem;
+        fill: $color-white;
+        cursor: pointer;
+        transition: fill .2s;
+        &:not(:last-child) { margin-right: 2rem;}
+        &:hover {fill: $color-secondary}
+    }
+}
+
+.blocks {
+    display: flex;
+
+    &-container {
+        width: 100%;
+        @include centerFlex;
+    }
+
+    &__item {
+        margin-right: .7rem;
+        height: .3rem;
+        width: 2.5rem;
+        background-color: #cdd3cf;
+        cursor: pointer;
+    
+        &--active { background-color: #1a444a;}
+    }
+}
+
+// BURGER TOP MENU ///////
+//////////////////////////
+
+.burger-btn {
+    height: 7rem;
+    width: 12rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    @include respond(tab-port) {justify-content: end}
+}
+
+.burger-icon-wraper {
+    cursor: pointer;
+    height: 4rem;
+    width: 4rem;
+
+    &--open {
+        display: none;
+        justify-content: end;
+
+        @include respond(tab-port) {
+            display: block;
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
         }
 
-        &__blocks {
-            display: flex;
+        & .burger-icon { background-color: transparent;}
+    
+        & .burger-icon::before {
+            top: 0;
+            transform: rotate(135deg);
         }
-
-        &__block {
-            height: .3rem;
-            width: 2rem;
-            background-color: #cdd3cf;
-            margin-right: .7rem;
-
-            &--active {
-                background-color: #1a444a;
-            }
+    
+        & .burger-icon::after {
+            top: 0;
+            transform: rotate(-135deg);
         }
     }
+}
+
+.burger-icon {
+    position: relative;
+    margin-top: 2rem;
+
+    &,
+    &::before,
+    &::after {
+        width: 4rem;
+        height: 2px;
+        background-color: $color-white;
+        display: inline-block;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    &::before { top: -1rem; }
+    &::after { top: 1rem; }
 }

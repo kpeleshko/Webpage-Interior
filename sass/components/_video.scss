@@ -7,9 +7,10 @@
     background-image: 
           linear-gradient(rgba($color-main, .7), rgba($color-main, .7)),
           url('../img/img7.jpg');
-    background-size: 100%;
+    background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
+    overflow: hidden;
 
     &__content {
         display: flex;
@@ -31,6 +32,11 @@
             color: rgba($color-white, .9);
             cursor: pointer;
 
+        }
+
+        &-play-btn {
+            border: none;
+            background-color: transparent;
         }
 
         &-play-icon {

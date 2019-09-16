@@ -1,14 +1,24 @@
 .service {
     margin: 10rem 0;
 
+    @include respond(tab-port) { margin: 7rem 0;}
+    @include respond(phone) { margin: 5rem 0;}
+
     &__content {
         display: flex;
         margin-top: 5rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            margin-top: 3rem;
+        }
     }
 
     &__menu {
-        flex: 0 0 22%;
+        flex-shrink: 22%;
         margin-right: 5rem;
+
+        @include respond(tab-port) { margin-right: 0;}
 
         &-list {
             display: flex;
@@ -16,12 +26,28 @@
             justify-content: space-between;
             height: 100%;
             color: $color-grey-text;
+
+            @include respond(tab-port) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+            }
         }
 
         &-item {
             align-self: baseline;
-            font-size: 1.6rem;
+            font-size: $font-size-medium;
             transition: transform .3s, color .3s;
+
+            @include respond(tab-port) {
+                width: 50%;
+                margin-bottom: 2rem;
+            }
+
+            @include respond(phone) { 
+                width: 100%;
+                margin-bottom: 1rem;
+            }
 
             &:hover {
                 transform: translateX(3rem);
@@ -33,6 +59,12 @@
                 transform: translateX(3rem);
                 color: $color-black;
                 border-bottom: 1px solid $color-black;
+
+                @include respond(tab-port) {
+                    transform: none;
+                    border-bottom: none;
+                    font-weight: 600;
+                }
             }
         }
 
@@ -46,15 +78,22 @@
     &__photo { width: 100%;}
 
     &__description {
+        position: relative;
         margin-top: 2rem;
         display: flex;
         justify-content: space-between;
+        @include respond(tab-port) { padding-bottom: 7rem;}
+        @include respond(phone) { display: block;}
     }
 
     &__text-box {
         flex: 0 0 55%;
+        @include respond(tab-port) { flex: 0 0 70%;}
 
-        &-header { font-size: 2rem;}
+        &-header { 
+            font-size: 2rem;
+            @include respond(phone) { display: none;}
+        }
 
         &-text {
             margin-top: 2rem;
@@ -68,6 +107,23 @@
         flex-direction: column;
         justify-content: space-between;
 
-        &-btn { margin-bottom: .6rem;}
+        &-projects {
+            @include respond(phone) { display: none;}
+        }
+
+        &-btn { 
+            margin-bottom: .6rem;
+            @include respond(tab-port) { 
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+            @include respond(phone) {
+                margin-top: 2rem;
+                align-self: center;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 }

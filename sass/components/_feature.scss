@@ -1,7 +1,39 @@
+.features {
+    padding: 10rem 0;
+    @include respond(tab-port) { padding: 7rem 0;}
+}
+
+.feature-wraper {
+    display: flex;
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+    }
+}
+
 .feature {
-    &:not(:last-child) {margin-right: 5rem;}
-    &:nth-child(even) {
-        align-self: flex-end;
+    @include respond(tab-port) {
+        width: 50%;
+        padding-right: 5rem;
+    }
+
+    @include respond(phone) {
+        width: 100%;
+        padding-right: 1rem;
+        padding-top: 1rem;
+    }
+
+    &:not(:last-child) { 
+        padding-right: 5rem;
+
+        @include respond(phone) { padding-right: 1rem;}
+    }
+
+    &:nth-child(even) { 
+        padding-top: 18rem;
+
+        @include respond(phone) {
+            padding-top: 1rem;
+        }
     }
 
     &__number {
@@ -12,17 +44,13 @@
         color: rgba(254, 160, 82, .26);
     }
 
-    &__header {
-        margin: 1.5rem 0;
-    }
+    &__header { margin: 1.5rem 0;}
 
     &__text {
         color: $color-grey-text;
         transition: color .3s;
         line-height: 2rem;
 
-        &:hover {
-            color: $color-black;
-        }
+        &:hover { color: $color-black;}
     }
 }

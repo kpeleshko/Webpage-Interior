@@ -12,6 +12,14 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+    @include respond(tab-port) { // width < 768?
+        font-size: 56.2%; //1 rem = 8px, 8/16 = 50%
+    }
+}
+
+body {
+    background-color: $color-background;
 }
 
 .container {
@@ -19,7 +27,6 @@ html {
     width: 100%;
     padding: 0 20px;
     margin: 0 auto;
-    position: relative;
 }
 
 ul {
@@ -30,4 +37,8 @@ a {
     text-decoration: none;
     color: inherit;
     display: inline-block;
+}
+
+.margin-bottom {
+    margin-bottom: 3rem;
 }
